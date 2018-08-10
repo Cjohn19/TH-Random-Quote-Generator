@@ -6,43 +6,50 @@ var quotes = [
      quote: "The answer is: me and dead owls don't give a hoot.",
      source: 'Raylan Givens',
      citation: 'Justified',
-     year: '2012'
+     year: '2012',
+     type: 'TV'
   },
   {
     quote: "I solemnly swear I am up to no good.",
     source: 'Harry Potter',
     citation: 'Harry Potter and the Prisoner of Azkaban',
-    year: 'September, 1999'
+    year: 'September, 1999',
+    type: 'Book'
   },
   {
     quote: "You come at the king, you best not miss.",
     source: 'Omar Little',
     citation: 'The Wire',
-    year: 'June, 2002'
+    year: 'June, 2002',
+    type: 'TV'
   },
   {
     quote: "Rubbing alcohol is for outside wounds, drinking alcohol is for inside wounds. It's science",
     source: 'Nick Miller',
     citation: 'New Girl',
-    year: null
+    year: null,
+    type: 'TV'
   },
   {
     quote: "You gave me a cookie, I gave you a cookie. You gave me cookie gave you cookie. Gave me cookie got you cookie! You gave me cookie I got you a cookie man! Gave me cookie got you cookie, we're even! We're even, Schmidt!",
     source: 'Nick Miller',
     citation: 'New Girl',
-    year: null
+    year: null,
+    type: 'TV'
   },
   {
     quote: "Either thou or I, or both, must go with him",
     source: 'Romeo',
     citation: 'Rome & Juliet By William Shakespeare',
-    year: "1597"
+    year: "1597",
+    type: 'Book'
   },
   {
     quote: "Get busy living or get busy dying.",
     source: 'Stephen King',
     citation: null,
-    year: null
+    year: null,
+    type: 'Movie'
   }
 ];
 
@@ -77,5 +84,5 @@ function createHTMLForQuote(quoteObj){
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-//
+// prints a new quote ever 30 seconds
 setInterval(printQuote, 30000);
