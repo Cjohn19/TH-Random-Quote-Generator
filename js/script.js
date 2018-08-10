@@ -53,6 +53,19 @@ var quotes = [
   }
 ];
 
+// Object for type colors
+var types = {
+  book: '#12ABB3',
+  tv: '#3452AB',
+  movie: '#5ACD3B'
+}
+
+// Gets color
+function getColorForType(type){
+  return types[type];
+}
+
+
 // Returns a rondom quote by generating a random index
 function getRandomQuote(array) {
   var randomIndex = Math.floor( Math.random() * array.length );
@@ -63,6 +76,7 @@ function getRandomQuote(array) {
 function printQuote() {
   var quote = getRandomQuote(quotes);
   var html = createHTMLForQuote(quote);
+  var color = getColorForType(quote.type.toLowerCase());
   document.getElementById('quote-box').innerHTML = html;
 }
 
