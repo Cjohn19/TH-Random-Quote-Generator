@@ -65,6 +65,12 @@ function getColorForType(type){
   return types[type];
 }
 
+// Change Background Color based on quote
+function changeBgColorForQuote(quote){
+  var color = getColorForType(quote.type.toLowerCase());
+  document.body.style.backgroundColor = color;
+}
+
 
 // Returns a rondom quote by generating a random index
 function getRandomQuote(array) {
@@ -76,9 +82,8 @@ function getRandomQuote(array) {
 function printQuote() {
   var quote = getRandomQuote(quotes);
   var html = createHTMLForQuote(quote);
-  var color = getColorForType(quote.type.toLowerCase());
+  changeBgColorForQuote(quote);
   document.getElementById('quote-box').innerHTML = html;
-  document.body.style.backgroundColor = color
 }
 
 //Creates HTML for a quote, ignoring properties if they dont exist
