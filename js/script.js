@@ -22,13 +22,13 @@ var quotes = [
     year: 'June, 2002'
   },
   {
-    quote: "Rubbing alcohol is for outside wounds, drinking alcohol is for inside wounds. It's science"
+    quote: "Rubbing alcohol is for outside wounds, drinking alcohol is for inside wounds. It's science",
     source: 'Nick Miller',
     citation: 'New Girl',
     year: null
   },
   {
-    quote: "You gave me a cookie, I gave you a cookie. You gave me cookie gave you cookie. Gave me cookie got you cookie! You gave me cookie I got you a cookie man! Gave me cookie got you cookie, we're even! We're even, Schmidt!"
+    quote: "You gave me a cookie, I gave you a cookie. You gave me cookie gave you cookie. Gave me cookie got you cookie! You gave me cookie I got you a cookie man! Gave me cookie got you cookie, we're even! We're even, Schmidt!",
     source: 'Nick Miller',
     citation: 'New Girl',
     year: null
@@ -38,8 +38,41 @@ var quotes = [
     source: 'Romeo',
     citation: 'Rome & Juliet By William Shakespeare',
     year: "1597"
+  },
+  {
+    quote: "Get busy living or get busy dying.",
+    source: 'Stephen King',
+    citation: null,
+    year: null
   }
 ];
+
+function getRandomQuote(array) {
+  var randomIndex = Math.floor( Math.random() * array.length );
+  return array[randomIndex];
+};
+
+function printQuote() {
+  var quote = getRandomQuote(quotes);
+  var html = createHTMLForQuote(quote);
+  document.getElementById('quote-box').innerHTML = html;
+}
+
+function createHTMLForQuote(quoteObj){
+  var html = '<p class="quote">' + quoteObj.quote + '</p>';
+  html += '<p class="source">' + quoteObj.source + '';
+
+  if (quoteObj.citation != null) {
+    html +='<span class="citation">' + quoteObj.citation + '</span>';
+  }
+  if (quoteObj.year != null) {
+    html +='<span class="year">' + quoteObj.year + '</span>';
+  }
+  html +='</p>';
+  return html;
+}
+
+
 
 
 
