@@ -57,7 +57,7 @@ var quotes = [
 var types = {
   book: '#12ABB3',
   tv: '#3452AB',
-  movie: '#5ACD3B'
+  movie: '#ba1818'
 }
 
 // Gets color
@@ -78,6 +78,7 @@ function printQuote() {
   var html = createHTMLForQuote(quote);
   var color = getColorForType(quote.type.toLowerCase());
   document.getElementById('quote-box').innerHTML = html;
+  document.body.style.backgroundColor = color
 }
 
 //Creates HTML for a quote, ignoring properties if they dont exist
@@ -91,6 +92,7 @@ function createHTMLForQuote(quoteObj){
   if (quoteObj.year != null) {
     html +='<span class="year">' + quoteObj.year + '</span>';
   }
+  html +='<span class="year">' + quoteObj.type + '</span>';
   html +='</p>';
   return html;
 }
