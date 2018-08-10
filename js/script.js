@@ -1,7 +1,6 @@
-// FSJS - Random Quote Generator
+// Cjohn19 - Random Quote Generator
 
-// Create the array of quote objects and name it quotes
-
+// This is an array of quotes
 var quotes = [
   {
      quote: "The answer is: me and dead owls don't give a hoot.",
@@ -47,17 +46,20 @@ var quotes = [
   }
 ];
 
+// Returns a rondom quote by generating a random index
 function getRandomQuote(array) {
   var randomIndex = Math.floor( Math.random() * array.length );
   return array[randomIndex];
 };
 
+// Gets and prints a random quote
 function printQuote() {
   var quote = getRandomQuote(quotes);
   var html = createHTMLForQuote(quote);
   document.getElementById('quote-box').innerHTML = html;
 }
 
+//Creates HTML for a quote, ignoring properties if they dont exist
 function createHTMLForQuote(quoteObj){
   var html = '<p class="quote">' + quoteObj.quote + '</p>';
   html += '<p class="source">' + quoteObj.source + '';
@@ -72,18 +74,5 @@ function createHTMLForQuote(quoteObj){
   return html;
 }
 
-
-
-
-
-// Create the getRandomQuuote function and name it getRandomQuote
-
-
-
-// Create the printQuote funtion and name it printQuote
-
-
-
-// This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
