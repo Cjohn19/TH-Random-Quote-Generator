@@ -1,7 +1,7 @@
 // Cjohn19 - Random Quote Generator
 
 // This is an array of quotes
-var quotes = [
+const quotes = [
   {
      quote: "The answer is: me and dead owls don't give a hoot.",
      source: 'Raylan Givens',
@@ -54,7 +54,7 @@ var quotes = [
 ];
 
 // Object for type colors
-var types = {
+const types = {
   book: '#12ABB3',
   tv: '#3452AB',
   movie: '#ba1818'
