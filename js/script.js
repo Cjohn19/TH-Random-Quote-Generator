@@ -74,7 +74,6 @@ function changeBgColorForQuote(quote){
 
 // Returns a rondom quote by generating a random index
 function getRandomQuote(array) {
-  types.book = "#ab44ee";
   var randomIndex = Math.floor( Math.random() * array.length );
   return array[randomIndex];
 };
