@@ -31,7 +31,8 @@ const quotes = [
     type: 'TV'
   },
   {
-    quote: "You gave me a cookie, I gave you a cookie. You gave me cookie gave you cookie. Gave me cookie got you cookie! You gave me cookie I got you a cookie man! Gave me cookie got you cookie, we're even! We're even, Schmidt!",
+    quote: `You gave me a cookie, I gave you a cookie. You gave me cookie gave you cookie.
+    Gave me cookie got you cookie! You gave me cookie I got you a cookie man! Gave me cookie got you cookie, we're even! We're even, Schmidt!`,
     source: 'Nick Miller',
     citation: 'New Girl',
     year: null,
