@@ -1,13 +1,12 @@
 // Cjohn19 - Random Quote Generator
 
 // This is an array of quotes
-const quotes = [
-  {
-     quote: "The answer is: me and dead owls don't give a hoot.",
-     source: 'Raylan Givens',
-     citation: 'Justified',
-     year: '2012',
-     type: 'TV'
+const quotes = [{
+    quote: "The answer is: me and dead owls don't give a hoot.",
+    source: 'Raylan Givens',
+    citation: 'Justified',
+    year: '2012',
+    type: 'TV'
   },
   {
     quote: "I solemnly swear I am up to no good.",
@@ -73,7 +72,7 @@ const changeBgColorForQuote = quote => {
 
 // Returns a rondom quote by generating a random index
 const getRandomQuote = array => {
-  var randomIndex = Math.floor( Math.random() * array.length );
+  var randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 };
 
