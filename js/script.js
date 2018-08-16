@@ -62,25 +62,23 @@ const types = {
 }
 
 // Gets color
-function getColorForType(type){
-  return types[type];
-}
+const getColorForType = type => types[type];
 
 // Change Background Color based on quote
-function changeBgColorForQuote(quote){
+const changeBgColorForQuote = quote => {
   var color = getColorForType(quote.type.toLowerCase());
   document.body.style.backgroundColor = color;
 }
 
 
 // Returns a rondom quote by generating a random index
-function getRandomQuote(array) {
+const getRandomQuote = array => {
   var randomIndex = Math.floor( Math.random() * array.length );
   return array[randomIndex];
 };
 
 // Gets and prints a random quote
-function printQuote() {
+const printQuote = () => {
   var quote = getRandomQuote(quotes);
   var html = createHTMLForQuote(quote);
   changeBgColorForQuote(quote);
@@ -88,18 +86,18 @@ function printQuote() {
 }
 
 //Creates HTML for a quote, ignoring properties if they dont exist
-function createHTMLForQuote(quoteObj){
-  var html = '<p class="quote">' + quoteObj.quote + '</p>';
-  html += '<p class="source">' + quoteObj.source + '';
+const createHTMLForQuote = (quoteObj) => {
+  var html = `<p class="quote"> ${quoteObj.quote} </p>
+              <p class="source"> ${quoteObj.source} `;
 
   if (quoteObj.citation != null) {
-    html +='<span class="citation">' + quoteObj.citation + '</span>';
+    html += `<span class="citation"> ${quoteObj.citation} </span>`;
   }
   if (quoteObj.year != null) {
-    html +='<span class="year">' + quoteObj.year + '</span>';
+    html += `<span class="year"> ${quoteObj.year} </span>`;
   }
-  html +='<span class="year">' + quoteObj.type + '</span>';
-  html +='</p>';
+  html += `<span class="year"> ${quoteObj.type} </span>`;
+  html += `</p>`;
   return html;
 }
 
